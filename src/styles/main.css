@@ -47,7 +47,11 @@ body {
     justify-content: space-between;
 }
 .head__brand img {
-    width: 80px;
+}
+.head__nav {
+    border: none;
+    outline: none;
+    background-color: transparent;
 }
 .head__menu {
 
