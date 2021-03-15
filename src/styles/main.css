@@ -59,6 +59,78 @@ body {
 .head__close {
     display: none;
 }
+.modal__container {
+    display: none;
+    position: absolute;
+    top: 110px;
+    right: 20px;
+    z-index: 2;
+    width: 320px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.buttons__container {
+    border-bottom: 1px solid var(--color-neutral);
+}
+.modal__button {
+    margin-bottom: 20px;
+    width: 100%;
+    border: none;
+    font-weight: bold;
+    outline: none;
+    background-color: transparent;
+}
+.modal__button img {
+}
+.modal__list {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    text-align: center;
+    background-color: var(--color-neutral);
+    display: none;
+}
+.modal__list li {
+    margin: 5px;
+}
+.modal__list a {
+    text-decoration: none;
+    color: var(--color-dark-blue);
+    font-size: 1.2rem;
+}
+.session {
+    padding: 20px 20px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.session__login {
+    width: 100px;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    outline: none;
+    background-color: transparent;
+}
+.session__signup {
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 17.5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--color-light-red);
+}
+
 .header__title .title {
     font-size: 3.2rem;
     line-height: 4.4rem;
