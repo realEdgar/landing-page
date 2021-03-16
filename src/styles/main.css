@@ -73,6 +73,12 @@ body {
 .buttons__container {
     border-bottom: 1px solid var(--color-neutral);
 }
+.red {
+    display: inline;
+}
+.white {
+    display: none;
+}
 .modal__button {
     margin-bottom: 20px;
     width: 100%;

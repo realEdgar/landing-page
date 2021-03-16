@@ -36,37 +36,32 @@ $button__company.addEventListener('click', showList);
 $button__connect.addEventListener('click', showList);
 
 function showList(ev) {
-    console.log(ev)
-    switch(ev.target.id) {
-        case 'product':
-            if($list__product.style.display == 'none') {
-              $list__product.style.display = "block";
-              ev.target.children[0].style.transform = 'rotate(180deg)';
-            } else {
-              $list__product.style.display = "none";
-              ev.target.children[0].style.transform = 'rotate(0deg)';
-            }            
-        break;
-        case 'company':
-            if($list__company.style.display == 'none') {
-                $list__company.style.display = "block";
-                ev.target.children[0].style.transform = 'rotate(180deg)';
-              } else {
-                $list__company.style.display = "none";
-                ev.target.children[0].style.transform = 'rotate(0deg)';
-              } 
-        break;
-        case 'connect':
-            if($list__connect.style.display == 'none') {
-                $list__connect.style.display = "block";
-                ev.target.children[0].style.transform = 'rotate(180deg)';
-              } else {
-                $list__connect.style.display = "none";
-                ev.target.children[0].style.transform = 'rotate(0deg)';
-              } 
-        break;
+  console.log(ev);
+  if(ev.target.id == 'product') {
+    if($list__product.style.display == 'none') {
+      $list__product.style.display = "block";
+      ev.target.children[0].style.transform = 'rotate(180deg)';
+    } else {
+      $list__product.style.display = "none";
+      ev.target.children[0].style.transform = 'rotate(0deg)';
     }
+  }
+  if(ev.target.id == 'company'){
+    if($list__company.style.display == 'none') {
+      $list__company.style.display = "block";
+      ev.target.children[0].style.transform = 'rotate(180deg)';
+    } else {
+      $list__company.style.display = "none";
+      ev.target.children[0].style.transform = 'rotate(0deg)';
+    }
+  }
+  if(ev.target.id == 'connect'){
+    if($list__connect.style.display == 'none') {
+        $list__connect.style.display = "block";
+        ev.target.children[0].style.transform = 'rotate(180deg)';
+    } else {
+        $list__connect.style.display = "none";
+        ev.target.children[0].style.transform = 'rotate(0deg)';
+    }
+  }
 }
-
-console.log($button__product, $button__connect, $button__company);
-console.log($list__product, $list__connect, $list__company);

@@ -1,0 +1,56 @@
+@media (min-width: 700px) {
+    .header {
+        height: 500px;
+        padding-top: 20px;
+        padding-right: 0;
+    }
+    .header__title .title {
+        font-size: 5rem;
+    }
+    .head__nav {
+        display: none;
+    }
+    .modal__container {
+        width: 90%;
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        background-color: transparent;
+    }
+    .buttons__container {
+        display: flex;
+        border: none;
+    }
+    .modal__button {
+        width: 100px;
+        margin: 0;
+        color: #fff;
+    }
+    .red {
+        display: none;
+    }
+    .white {
+        display: inline;
+    }
+    .session {
+        flex-direction: row;
+        padding: 0;
+    }
+    .session__login {
+        width: 100px;
+        margin: 0px;
+        color: white;
+        background-color: transparent;
+    }
+    .session__signup {
+        color: var(--color-light-red);
+        background-color: #fff;
+    }
+    .main {
+        padding: 0;
+    }
+    .section-one {
+        display: grid;
+        grid-template: 0.1fr 0.3fr 0.2fr 0.4fr / 1fr 1fr;
+    }
+}
