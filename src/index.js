@@ -21,9 +21,10 @@ function showModal(ev) {
 
 // Interaction on the modal
 
-const $button__product = document.getElementById('product'); // Button Product
-const $button__company = document.getElementById('company'); // Button Company
-const $button__connect = document.getElementById('connect'); // Button Connect
+const buttons = [];
+buttons.push(document.getElementById('product')); // Button Product
+buttons.push(document.getElementById('company')); // Button Company
+buttons.push(document.getElementById('connect')); // Button Connect
 
 const $list__product = document.getElementById('product__list'); // List Product
 const $list__company = document.getElementById('company__list'); // List Company
@@ -31,37 +32,55 @@ const $list__connect = document.getElementById('connect__list'); // List Connect
 
 // Adding listeners to the buttons on the modal
 
-$button__product.addEventListener('click', showList);
-$button__company.addEventListener('click', showList);
-$button__connect.addEventListener('click', showList);
+buttons.forEach(button => {
+  button.addEventListener('click', showList);
+})
 
 function showList(ev) {
-  console.log(ev);
   if(ev.target.id == 'product') {
-    if($list__product.style.display == 'none') {
-      $list__product.style.display = "block";
-      ev.target.children[0].style.transform = 'rotate(180deg)';
-    } else {
+    if($list__product.style.display == 'block') {
       $list__product.style.display = "none";
       ev.target.children[0].style.transform = 'rotate(0deg)';
+      ev.target.children[1].style.transform = 'rotate(0deg)';
+      buttons[1].addEventListener('click', showList)
+      buttons[2].addEventListener('click', showList)
+    } else {
+      $list__product.style.display = "block";
+      ev.target.children[0].style.transform = 'rotate(180deg)';
+      ev.target.children[1].style.transform = 'rotate(180deg)';
+      
+      buttons[1].removeEventListener('click', showList);
+      buttons[2].removeEventListener('click', showList);
     }
   }
   if(ev.target.id == 'company'){
-    if($list__company.style.display == 'none') {
-      $list__company.style.display = "block";
-      ev.target.children[0].style.transform = 'rotate(180deg)';
-    } else {
+    if($list__company.style.display == 'block') {
       $list__company.style.display = "none";
       ev.target.children[0].style.transform = 'rotate(0deg)';
+      ev.target.children[1].style.transform = 'rotate(0deg)';
+      buttons[0].addEventListener('click', showList)
+      buttons[2].addEventListener('click', showList)
+    } else {
+      $list__company.style.display = "block";
+      ev.target.children[0].style.transform = 'rotate(180deg)';
+      ev.target.children[1].style.transform = 'rotate(180deg)';
+      buttons[0].removeEventListener('click', showList);
+      buttons[2].removeEventListener('click', showList);
     }
   }
   if(ev.target.id == 'connect'){
-    if($list__connect.style.display == 'none') {
-        $list__connect.style.display = "block";
-        ev.target.children[0].style.transform = 'rotate(180deg)';
+    if($list__connect.style.display == 'block') {
+      $list__connect.style.display = "none";
+      ev.target.children[0].style.transform = 'rotate(0deg)';
+      ev.target.children[1].style.transform = 'rotate(0deg)';
+      buttons[0].addEventListener('click', showList)
+      buttons[1].addEventListener('click', showList)
     } else {
-        $list__connect.style.display = "none";
-        ev.target.children[0].style.transform = 'rotate(0deg)';
+      $list__connect.style.display = "block";
+      ev.target.children[0].style.transform = 'rotate(180deg)';
+      ev.target.children[1].style.transform = 'rotate(180deg)';
+      buttons[0].removeEventListener('click', showList);
+      buttons[1].removeEventListener('click', showList);
     }
   }
 }
