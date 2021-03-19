@@ -169,9 +169,87 @@ body {
 .button-one {
     margin-right: 10px;
     color: var(--color-light-red);
+    cursor: pointer;
+}
+.button-one:hover {
+    color: #fff;
+    background-color: var(--color-very-light-red);
 }
 .button-two {
     background-color: transparent;
     color: #fff;
     border: 1px solid #fff;
+    cursor: pointer;
+}
+.button-two:hover {
+    color: var(--color-light-red);
+    background-color: #fff;
+}
+.designed__future {
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.designed__future--title {
+    font-size: 2.6rem;
+    margin-bottom: 50px;
+}
+.designed__future--image {
+    margin-bottom: 50px;
+}
+.designed__future--descriptions {
+    width: 80%;
+}
+.article {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.article__title {
+    margin-bottom: 20px;
+    font-size: 2.6rem;
+}
+.article__description {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: var(--color-very-dark-des-blue);
+}
+.designed__future--state {
+    margin-top: 200px;
+    padding-bottom: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    width: 100%;
+    background-color: var(--color-very-dark-gray-blue);
+    background-image: url('../images/bg-pattern-circles.svg');
+    background-size: 600px 600px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -250px;
+}
+.phone__picture {
+    display: flex;
+    justify-content: center;
+    margin-top: -170px;
+}
+.phone__picture img {
+    width: 375px;
+}
+.states {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.state__title {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    color: #fff;
+}
+.state__description {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: var(--color-neutral);
 }
